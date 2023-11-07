@@ -10,4 +10,4 @@
 `conda install pytorch torchvision -c pytorch --solver libmamba`
 *	`pip install ipython`
 *	Atari games:
-   *	Had to run `pip install "gym[atari, accept-rom-license]"` within rl environment.
+    *	Had to run `pip install "gym[atari, accept-rom-license]"` within rl environment.
