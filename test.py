@@ -7,7 +7,7 @@ import random
 
 
 # Make the environment
-env = gym.make('HumanoidStandup-v4', render_mode='rgb_array')
+env = gym.make('HumanoidStandup-v4', render_mode='human')
 
 # Note the observation and action space
 obs_space = env.observation_space
@@ -17,7 +17,7 @@ print(f"The action space: {action_space}")
 
 # Play the game
 mapping = {(pygame.K_UP,): 0.4*np.ones(17, dtype=np.float32), (pygame.K_DOWN,): -0.4*np.ones(17, dtype=np.float32), (pygame.K_LEFT,): -0.2*np.ones(17, dtype=np.float32), (pygame.K_RIGHT,): 0.2*np.ones(17, dtype=np.float32)}
-play(env, keys_to_action=mapping, noop=np.zeros(17, dtype=np.float32))
+#play(env, keys_to_action=mapping, noop=np.zeros(17, dtype=np.float32))
 
 # Interacting with the environment
 print("Upper Bound for Env Observation", env.observation_space.high)
