@@ -1,3 +1,8 @@
+"""
+First proper go at setting up and training a reinforcement learning network.
+This example was taken from pytorch tutorials (https://github.com/pytorch/tutorials/blob/main/intermediate_source/reinforcement_q_learning.py).
+"""
+
 import gym
 import math
 import random
