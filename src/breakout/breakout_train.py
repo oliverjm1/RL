@@ -17,7 +17,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 
-env = gym.make("MountainCar-v0", render_mode='human')
+env = gym.make("ALE/Breakout-v5", full_action_space=False, render_mode='human')
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
@@ -63,16 +63,21 @@ class DQN(nn.Module):
 
     def __init__(self, n_observations, n_actions):
         super(DQN, self).__init__()
-        self.layer1 = nn.Linear(n_observations, 256)
-        self.layer2 = nn.Linear(256, 128)
-        self.layer3 = nn.Linear(128, n_actions)
+        self.layer1 = nn.Conv2d(3, 16, 3)
+        self.layer2 = nn.Conv2d(16, 16, 3)
+        self.flatten = nn.Flatten()
+        self.layer3 = nn.Linear(514176, 64)
+        self.layer4 = nn.Linear(64, n_actions)
 
     # Called with either one element to determine next action, or a batch
     # during optimization. Returns tensor([[left0exp,right0exp]...]).
     def forward(self, x):
+        x = torch.permute(x, (0,3,1,2))
         x = F.relu(self.layer1(x))
         x = F.relu(self.layer2(x))
-        return self.layer3(x)
+        x = self.flatten(x)
+        x = F.relu(self.layer3(x))
+        return self.layer4(x)
     
 
 """
@@ -90,11 +95,11 @@ use the model (early on is more exploratory.)
 # EPS_DECAY controls the rate of exponential decay of epsilon, higher means a slower decay
 # TAU is the update rate of the target network
 # LR is the learning rate of the ``AdamW`` optimizer
-BATCH_SIZE = 128
+BATCH_SIZE = 16
 GAMMA = 0.99
 EPS_START = 0.9
 EPS_END = 0.05
-EPS_DECAY = 2000
+EPS_DECAY = 1000
 TAU = 0.005
 LR = 1e-4
 

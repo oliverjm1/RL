@@ -1,7 +1,6 @@
 """
 First proper go at setting up and training a reinforcement learning network.
-This builds on the example from pytorch tutorials.
-(https://github.com/pytorch/tutorials/blob/main/intermediate_source/reinforcement_q_learning.py).
+This example was taken from pytorch tutorials (https://github.com/pytorch/tutorials/blob/main/intermediate_source/reinforcement_q_learning.py).
 """
 
 import gym
@@ -17,7 +16,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 
-env = gym.make("MountainCar-v0", render_mode='human')
+env = gym.make("Acrobot-v1", render_mode='human')
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
@@ -63,8 +62,8 @@ class DQN(nn.Module):
 
     def __init__(self, n_observations, n_actions):
         super(DQN, self).__init__()
-        self.layer1 = nn.Linear(n_observations, 256)
-        self.layer2 = nn.Linear(256, 128)
+        self.layer1 = nn.Linear(n_observations, 128)
+        self.layer2 = nn.Linear(128, 128)
         self.layer3 = nn.Linear(128, n_actions)
 
     # Called with either one element to determine next action, or a batch
@@ -119,7 +118,7 @@ def select_action(state):
     eps_threshold = EPS_END + (EPS_START - EPS_END) * \
         math.exp(-1. * steps_done / EPS_DECAY)
     steps_done += 1
-    if sample > eps_threshold:
+    if (sample > eps_threshold):
         with torch.no_grad():
             # t.max(1) will return the largest column value of each row.
             # second column on max result is index of where max element was
@@ -213,7 +212,7 @@ def optimize_model():
 if torch.cuda.is_available():
     num_episodes = 600
 else:
-    num_episodes = 200
+    num_episodes = 600
 
 """
 TRAIN LOOP
@@ -254,7 +253,7 @@ for i_episode in range(num_episodes):
 
         if done:
             episode_durations.append(t + 1)
-            #plot_durations()
+            plot_durations()
             break
 
 print('Complete')
