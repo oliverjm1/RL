@@ -1,5 +1,7 @@
 # Setting up OpenAI Gym environment etc…
 
+## This is how I initially did it. Alternative to doing all with pip install.
+
 *  Made new conda environment called `rl` and activated it.
 
 *	First I am trying to install by making a new conda environment and doing `conda install -c conda-forge gym-all`
