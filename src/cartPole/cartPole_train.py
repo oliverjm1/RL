@@ -16,7 +16,9 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 
-env = gym.make("CartPole-v1", render_mode='human')
+from myCartPole import CartPoleEnv
+
+env = CartPoleEnv(render_mode='human')
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
@@ -143,9 +145,9 @@ def plot_durations(show_result=False):
     plt.ylabel('Duration')
     plt.plot(durations_t.numpy())
     # Take 100 episode averages and plot them too
-    if len(durations_t) >= 10:
-        means = durations_t.unfold(0, 10, 1).mean(1).view(-1)
-        means = torch.cat((torch.zeros(9), means))
+    if len(durations_t) >= 100:
+        means = durations_t.unfold(0, 100, 1).mean(1).view(-1)
+        means = torch.cat((torch.zeros(99), means))
         plt.plot(means.numpy())
 
     plt.pause(0.001)  # pause a bit so that plots are updated
@@ -210,9 +212,9 @@ def optimize_model():
 
 # Set epochs based on hardware available
 if torch.cuda.is_available():
-    num_episodes = 600
+    num_episodes = 1000
 else:
-    num_episodes = 600
+    num_episodes = 1000
 
 """
 TRAIN LOOP
@@ -253,7 +255,7 @@ for i_episode in range(num_episodes):
 
         if done:
             episode_durations.append(t + 1)
-            #plot_durations()
+            plot_durations()
             break
 
 print('Complete')

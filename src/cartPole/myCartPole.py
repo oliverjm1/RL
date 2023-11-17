@@ -50,7 +50,7 @@ class CartPoleEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
     |-----|-----------------------|---------------------|-------------------|
     | 0   | Cart Position         | -4.8                | 4.8               |
     | 1   | Cart Velocity         | -Inf                | Inf               |
-    | 2   | Pole Angle            | ~ -0.418 rad (-40°) | ~ 0.418 rad (40°) |
+    | 2   | Pole Angle            | ~ -0.418 rad (-45°) | ~ 0.418 rad (45°) |
     | 3   | Pole Angular Velocity | -Inf                | Inf               |
 
     **Note:** While the ranges above denote the possible values for observation space of each element,
@@ -103,7 +103,7 @@ class CartPoleEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
         self.kinematics_integrator = "euler"
 
         # Angle at which to fail the episode
-        self.theta_threshold_radians = 20 * 2 * math.pi / 360
+        self.theta_threshold_radians = 45 * 2 * math.pi / 360
         self.x_threshold = 2.4
 
         # Angle limit set to 2 * theta_threshold_radians so failing observation
@@ -248,7 +248,7 @@ class CartPoleEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
         world_width = self.x_threshold * 2
         scale = self.screen_width / world_width
         polewidth = 10.0
-        polelen = scale * (2 * self.length)
+        polelen = scale * (4 * self.length)
         cartwidth = 50.0
         cartheight = 30.0
 
