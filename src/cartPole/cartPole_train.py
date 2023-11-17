@@ -17,8 +17,10 @@ import torch.optim as optim
 import torch.nn.functional as F
 
 from myCartPole import CartPoleEnv
+from gym.wrappers import TimeLimit
 
-env = CartPoleEnv(render_mode='human')
+env = CartPoleEnv(render_mode="human")
+env = TimeLimit(env, max_episode_steps=500)
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
