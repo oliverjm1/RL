@@ -14,11 +14,13 @@ Once the environment has been created, activate it with `conda activate rl_test`
 
 ### 2. Cloning This Repoository
 
-Still in terminal, navigate to where you would like to save this folder. Then do `git clone https://github.com/oliverjm1/RL.git`.
+Still in terminal, navigate to where you would like to save this folder. Then do:
+
+`git clone https://github.com/oliverjm1/RL.git`
 
 ### 3. Start With Example Notebook
 
-There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the *src/hackathon/* folder (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *hackathon* folder.
+There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the *hackathon* folder (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *hackathon* folder.
 
 # Reinforcement Learning
 
@@ -37,6 +39,8 @@ Layout of files seen below:
 ├── LICENSE
 ├── README.md
 ├── alt_setting_up_env.md
+├── hackathon
+│   └── start_here.ipynb
 ├── rl_env.yml
 └── src
     ├── acrobot
@@ -53,8 +57,6 @@ Layout of files seen below:
     │   ├── cartPole_manual.py
     │   ├── cartPole_train.py
     │   └── myCartPole.py
-    ├── hackathon
-    │   └── start_here.ipynb
     └── mountainCar
         ├── mountainCar_manual.py
         └── mountainCar_train.py
