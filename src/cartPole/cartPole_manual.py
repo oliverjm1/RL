@@ -31,6 +31,6 @@ n_observations = len(state)
 print("num obs: ", n_observations)
 
 play(env, keys_to_action={
-    "a": np.array(2),
-    "d": np.array(0),
+    "a": np.array(0),
+    "d": np.array(2),
 }, noop=np.array(1))
