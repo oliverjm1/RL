@@ -8,7 +8,7 @@ Still in terminal, navigate to where you would like to save this folder. Then do
 
 This should create a folder called *RL*, containing the directory.
 
-### 1. Environment Setup
+### 2. Environment Setup
 
 The environment file can be found at the top level of this cloned repository (**rl_env.yml**).
 
@@ -20,7 +20,7 @@ Hopefully this should work but it never seems to be that simple. If not, have a 
 
 Once the environment has been created, activate it with `conda activate rl_test` (or whatever you named the environment).
 
-### 1. Start With Example Notebook
+### 3. Start With Example Notebook
 
 There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. 
 
