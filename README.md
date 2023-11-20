@@ -2,7 +2,7 @@
 
 ### 1. Cloning This Repoository
 
-Still in terminal, navigate to where you would like to save this folder. Then do:
+In your terminal, navigate to where you would like to save this repository. Then do:
 
 `git clone https://github.com/oliverjm1/RL.git`
 
