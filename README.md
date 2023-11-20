@@ -22,7 +22,7 @@ This should create a folder called *RL*, containing the directory.
 
 ### 3. Start With Example Notebook
 
-There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *RL* folder.
+There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *RL* folder (potentially will have to do `pip install jupyter` at this point).
 
 # Reinforcement Learning
 
