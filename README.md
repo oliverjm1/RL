@@ -22,11 +22,11 @@ To create an environment from this file, go to terminal, make sure you're in the
 
 Hopefully this should work but it never seems to be that simple. If not, have a look at the **alt_setting_up_env.md** file which uses conda instead of pip. 
 
-Once the environment has been created, activate it with `conda activate rl_test` (or whatever you named the environment).
+Once the environment has been created, activate it with `conda activate rl_env` (or whatever you named the environment).
 
 ### 3. Start With Example Notebook
 
-There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. 
+There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_env environment is activated. 
 
 To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *RL* folder (potentially will have to do `pip install jupyter` at this point).
 
