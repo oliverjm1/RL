@@ -22,7 +22,9 @@ This should create a folder called *RL*, containing the directory.
 
 ### 3. Start With Example Notebook
 
-There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *RL* folder (potentially will have to do `pip install jupyter` at this point).
+There is a python notebook with example code for using OpenAi gym, both for playing the games manually and for training a network through reinforcement learning to play the games. This file is found in the top level of the directory (file is called **start_here.ipynb**). I've been using VSCode but you should also be able to use jupyter notebook. Just make sure that the conda rl_test environment is activated. 
+
+To make sure you're working within a specific conda environment in jupyter notebook, make sure the environment is active and open the notebook through the terminal using `jupyter notebook start_here.ipynb` once navigated into the *RL* folder (potentially will have to do `pip install jupyter` at this point).
 
 # Reinforcement Learning
 
@@ -44,25 +46,20 @@ Layout of files seen below:
 ├── alt_setting_up_env.md
 ├── rl_env.yml
 ├── src
-│   ├── __pycache__
-│   │   └── __init__.cpython-310.pyc
-│   ├── acrobot
-│   │   ├── acrobot_manual.py
-│   │   └── acrobot_train.py
-│   ├── breakout
-│   │   ├── breakout_manual.py
-│   │   └── breakout_train.py
-│   ├── carRacing
-│   │   └── carRacing_manual.py
-│   ├── cartPole
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-310.pyc
-│   │   │   └── myCartPole.cpython-310.pyc
-│   │   ├── cartPole_manual.py
-│   │   ├── cartPole_train.py
-│   │   └── myCartPole.py
-│   └── mountainCar
-│       ├── mountainCar_manual.py
-│       └── mountainCar_train.py
+│   ├── acrobot
+│   │   ├── acrobot_manual.py
+│   │   └── acrobot_train.py
+│   ├── breakout
+│   │   ├── breakout_manual.py
+│   │   └── breakout_train.py
+│   ├── carRacing
+│   │   └── carRacing_manual.py
+│   ├── cartPole
+│   │   ├── cartPole_manual.py
+│   │   ├── cartPole_train.py
+│   │   └── myCartPole.py
+│   └── mountainCar
+│       ├── mountainCar_manual.py
+│       └── mountainCar_train.py
 └── start_here.ipynb
 ```
