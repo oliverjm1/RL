@@ -20,7 +20,9 @@ or maybe
 
 `conda env create --file rl_env.yml`
 
-Hopefully this should work but it never seems to be that simple. If not, have a look at the **alt_setting_up_env.md** file which uses conda instead of pip.
+#### IF THIS DIDN'T WORK:
+
+Hopefully this should work but it never seems to be that simple. If not, have a look at the **alt_setting_up_env.md** file which uses conda instead of pip. 
 
 Once the environment has been created, activate it with `conda activate rl_test` (or whatever you named the environment).
 
