@@ -12,7 +12,7 @@ This should create a folder called *RL*, containing the directory.
 
 The environment file can be found at the top level of this cloned repository (**rl_env.yml**).
 
-To create an environment from this file, go to terminal and enter:
+To create an environment from this file, go to terminal, make sure you're in the directory (`cd RL`) and enter:
 
 `conda create -f rl_env.yml`
 
