@@ -14,9 +14,9 @@ The environment file can be found at the top level of this cloned repository (**
 
 To create an environment from this file, go to terminal, make sure you're in the directory (`cd RL`) and enter:
 
-`conda env create -f rl_env.yml`.
-
-(There is another environment file *environment.yml* in which I removed hardware dependencies. Try with this one instead.)
+`conda env create -f environment1.yml`.
+ 
+ Fingers crossed.
 
 #### IF THIS DIDN'T WORK:
 
