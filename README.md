@@ -48,7 +48,7 @@ Layout of files seen below:
 ├── README.md
 ├── __init__.py
 ├── alt_setting_up_env.md
-├── rl_env.yml
+├── environment1.yml
 ├── src
 │   ├── acrobot
 │   │   ├── acrobot_manual.py
@@ -65,5 +65,6 @@ Layout of files seen below:
 │   └── mountainCar
 │       ├── mountainCar_manual.py
 │       └── mountainCar_train.py
-└── start_here.ipynb
+├── start_here.ipynb
+└── the_notebook.png
 ```
