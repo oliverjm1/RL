@@ -16,11 +16,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 
-from myCartPole import CartPoleEnv
-from gym.wrappers import TimeLimit
-
-env = CartPoleEnv(render_mode="human")
-env = TimeLimit(env, max_episode_steps=500)
+env = gym.make("CartPole-v1", render_mode="human")
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
@@ -223,7 +219,7 @@ TRAIN LOOP
 """
 
 for i_episode in range(num_episodes):
-    print(f"training {i_episode}")
+    print(f"episode {i_episode}")
     # Initialize the environment and get it's state
     state, info = env.reset()
     state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
