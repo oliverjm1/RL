@@ -14,7 +14,11 @@ The environment file can be found at the top level of this cloned repository (**
 
 To create an environment from this file, go to terminal, make sure you're in the directory (`cd RL`) and enter:
 
-`conda create -f rl_env.yml`
+`conda create -f rl_env.yml` 
+
+or maybe 
+
+`conda env create --file rl_env.yml`
 
 Hopefully this should work but it never seems to be that simple. If not, have a look at the **alt_setting_up_env.md** file which uses conda instead of pip.
 
